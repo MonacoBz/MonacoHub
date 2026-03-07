@@ -1,6 +1,6 @@
 package com.app.monacohub.domains.validaciones;
 
-import com.app.monacohub.domains.TopicoDto;
+import com.app.monacohub.domains.TopicoDtoCreate;
 import com.app.monacohub.domains.exceptions.ValidacionException;
 import com.app.monacohub.repository.TopicRepository;
 import org.springframework.stereotype.Component;
@@ -14,7 +14,7 @@ public class EsTopicoUnico implements Validacion{
         this.repository = repository;
     }
     @Override
-    public void valida(TopicoDto data) {
+    public void valida(TopicoDtoCreate data) {
         if(repository.existsByTituloAndMensaje(data.titulo(),data.mensaje()))throw new ValidacionException("El topico con el titulo: " + data.titulo() + " y el mensaje: " + data.mensaje() + " ya existen");
     }
 }

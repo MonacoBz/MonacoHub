@@ -1,12 +1,13 @@
 package com.app.monacohub.entity;
 
 import com.app.monacohub.domains.Status;
-import com.app.monacohub.domains.TopicoDto;
+import com.app.monacohub.domains.TopicoDtoCreate;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -26,6 +27,8 @@ public class Topico {
 
     private String mensaje;
 
+    @CreationTimestamp
+    @Column(updatable = false)
     private LocalDateTime fecha_creacion;
 
     private Status status;
@@ -34,7 +37,7 @@ public class Topico {
 
     private String curso;
 
-    public Topico(TopicoDto data){
+    public Topico(TopicoDtoCreate data){
         this.titulo = data.titulo();
         this.mensaje = data.mensaje();
         this.autor = data.autor();

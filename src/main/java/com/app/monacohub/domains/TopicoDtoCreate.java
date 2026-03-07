@@ -2,7 +2,7 @@ package com.app.monacohub.domains;
 
 import jakarta.validation.constraints.NotBlank;
 
-public record TopicoDto(
+public record TopicoDtoCreate(
         @NotBlank
         String titulo,
         @NotBlank

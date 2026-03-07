@@ -1,6 +1,6 @@
 package com.app.monacohub.domains.validaciones;
 
-import com.app.monacohub.domains.TopicoDto;
+import com.app.monacohub.domains.TopicoDtoCreate;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -14,7 +14,7 @@ public class TopicoValidador {
         this.validaciones = validaciones;
     }
 
-    public void valida(TopicoDto data) {
+    public void valida(TopicoDtoCreate data) {
         validaciones.forEach(v->v.valida(data));
     }
 }
