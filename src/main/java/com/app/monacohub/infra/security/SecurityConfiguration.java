@@ -16,22 +16,25 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration {
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
+    public SecurityFilterChain securityFilterChain(HttpSecurity http,SecurityFilter filter) throws Exception{
         return http
+                .addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class)
                 .sessionManagement((sesion)->sesion.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((authorizate)->
-                authorizate.requestMatchers("/topicos/**")
+                authorizate.requestMatchers(HttpMethod.POST,"/login")
+                        .permitAll()
+                        .requestMatchers("/topicos/**")
                         .authenticated()
-                        .requestMatchers(HttpMethod.POST,"/login")
-                        .permitAll())
-                .httpBasic(Customizer.withDefaults())
+                        .anyRequest()
+                        .authenticated())
                 .build();
     }
 
