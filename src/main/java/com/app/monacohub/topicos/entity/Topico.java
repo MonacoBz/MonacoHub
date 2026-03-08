@@ -1,7 +1,7 @@
-package com.app.monacohub.entity;
+package com.app.monacohub.topicos.entity;
 
-import com.app.monacohub.domains.Status;
-import com.app.monacohub.domains.TopicoDtoCreate;
+import com.app.monacohub.topicos.domains.Status;
+import com.app.monacohub.topicos.domains.TopicoDtoCreate;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

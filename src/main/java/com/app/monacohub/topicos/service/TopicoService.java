@@ -1,16 +1,13 @@
-package com.app.monacohub.service;
+package com.app.monacohub.topicos.service;
 
-import com.app.monacohub.domains.TopicDtoResponse;
-import com.app.monacohub.domains.TopicoDtoCreate;
-import com.app.monacohub.domains.exceptions.NoExisteException;
-import com.app.monacohub.domains.exceptions.ValidacionException;
-import com.app.monacohub.domains.validaciones.TopicoValidador;
-import com.app.monacohub.entity.Topico;
-import com.app.monacohub.repository.TopicRepository;
+import com.app.monacohub.topicos.domains.TopicDtoResponse;
+import com.app.monacohub.topicos.domains.TopicoDtoCreate;
+import com.app.monacohub.topicos.domains.exceptions.NoExisteException;
+import com.app.monacohub.topicos.domains.validaciones.TopicoValidador;
+import com.app.monacohub.topicos.entity.Topico;
+import com.app.monacohub.topicos.repository.TopicRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

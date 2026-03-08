@@ -1,4 +1,4 @@
-package com.app.monacohub.domains;
+package com.app.monacohub.topicos.domains;
 
 import jakarta.validation.constraints.NotBlank;
 

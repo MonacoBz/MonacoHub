@@ -1,6 +1,6 @@
-package com.app.monacohub.domains.validaciones;
+package com.app.monacohub.topicos.domains.validaciones;
 
-import com.app.monacohub.domains.TopicoDtoCreate;
+import com.app.monacohub.topicos.domains.TopicoDtoCreate;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

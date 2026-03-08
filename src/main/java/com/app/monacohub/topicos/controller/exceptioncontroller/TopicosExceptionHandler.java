@@ -1,7 +1,7 @@
-package com.app.monacohub.controller.exceptioncontroller;
+package com.app.monacohub.topicos.controller.exceptioncontroller;
 
-import com.app.monacohub.domains.exceptions.NoExisteException;
-import com.app.monacohub.domains.exceptions.ValidacionException;
+import com.app.monacohub.topicos.domains.exceptions.NoExisteException;
+import com.app.monacohub.topicos.domains.exceptions.ValidacionException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -13,7 +13,7 @@ import org.springframework.web.method.annotation.HandlerMethodValidationExceptio
 import java.util.List;
 
 @RestControllerAdvice
-public class GlobalExceptionHandler {
+public class TopicosExceptionHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<List<DatosErrorValidacion>> manejarError400PorRequestBody(MethodArgumentNotValidException e) {

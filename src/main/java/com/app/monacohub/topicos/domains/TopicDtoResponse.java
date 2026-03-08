@@ -1,6 +1,6 @@
-package com.app.monacohub.domains;
+package com.app.monacohub.topicos.domains;
 
-import com.app.monacohub.entity.Topico;
+import com.app.monacohub.topicos.entity.Topico;
 
 import java.time.LocalDateTime;
 

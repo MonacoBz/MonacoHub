@@ -1,0 +1,5 @@
+CREATE TABLE usuarios(
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(255) UNIQUE NOT NULL ,
+    contrasenia VARCHAR(255) NOT NULL
+);

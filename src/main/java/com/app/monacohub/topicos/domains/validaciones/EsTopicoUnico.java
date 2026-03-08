@@ -1,8 +1,8 @@
-package com.app.monacohub.domains.validaciones;
+package com.app.monacohub.topicos.domains.validaciones;
 
-import com.app.monacohub.domains.TopicoDtoCreate;
-import com.app.monacohub.domains.exceptions.ValidacionException;
-import com.app.monacohub.repository.TopicRepository;
+import com.app.monacohub.topicos.domains.TopicoDtoCreate;
+import com.app.monacohub.topicos.domains.exceptions.ValidacionException;
+import com.app.monacohub.topicos.repository.TopicRepository;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,11 +1,9 @@
-package com.app.monacohub.controller;
+package com.app.monacohub.topicos.controller;
 
-import com.app.monacohub.domains.TopicDtoResponse;
-import com.app.monacohub.domains.TopicoDtoCreate;
-import com.app.monacohub.service.TopicoService;
-import jakarta.validation.constraints.Max;
+import com.app.monacohub.topicos.domains.TopicDtoResponse;
+import com.app.monacohub.topicos.domains.TopicoDtoCreate;
+import com.app.monacohub.topicos.service.TopicoService;
 import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotNull;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
