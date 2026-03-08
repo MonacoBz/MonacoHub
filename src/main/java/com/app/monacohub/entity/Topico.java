@@ -44,4 +44,11 @@ public class Topico {
         this.curso = data.curso();
     }
 
+    public void actualizaInformacion(TopicoDtoCreate data){
+        this.titulo = data.titulo();
+        this.mensaje = data.mensaje();
+        this.autor = data.autor();
+        this.curso = data.curso();
+    }
+
 }
